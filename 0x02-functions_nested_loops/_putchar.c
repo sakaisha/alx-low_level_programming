@@ -1,15 +1,13 @@
-#include "main.h"
-	#include <unistd.h>
+#include <unistd.h>
+
 /**
-
-*_putchar - This function writes a single character to the standard output stream (stdout).
-*@c: The character that will be printed to stdout.
-*Return: Returns 1 on successful execution of the function.
-*If there is an error, -1 will be returned and the error will be set appropriately.
-
-*/
-
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 int _putchar(char c)
-	{
-		return (write(1, &c, 1));
-	}
+{
+	return (write(1, &c, 1));
+}
