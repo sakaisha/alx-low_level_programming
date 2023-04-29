@@ -2,7 +2,8 @@
 
 /**
  * print_triangle - prints a triangle of '#' characters with a new line at the end
- * @size: the size of the triangle to be printed
+ *
+ * @size: the size of the triangle
  */
 void print_triangle(int size)
 {
