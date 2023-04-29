@@ -1,12 +1,9 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * main - entry point
  *
- * Description: This function serves as the entry point of the program. 
- * It checks the code and returns an integer value of 0.
- *
- * Return: Always 0
+ * Return: Always 0.
  */
 int main(void)
 {

@@ -3,9 +3,6 @@
 /**
  * main - Entry point
  *
- * Description: Calls print_diagonal function to print diagonal lines of
- * varying lengths.
- *
  * Return: Always 0 (Success)
  */
 int main(void)
