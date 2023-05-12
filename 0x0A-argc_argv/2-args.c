@@ -3,8 +3,8 @@
 
 /**
  * main - prints all arguments it receives
- * @argc: number 
- * @argv: array
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
  * Return: Always 0 (Success)
  */
