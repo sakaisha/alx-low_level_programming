@@ -4,7 +4,7 @@
  * create_array - create array of size size and assign char 
  * @size: size of the array
  * @c: char to assign
- * Description: Create an array of size 'size' and assign the character 'c' to each element
+ * Description: Create an array of size 'size' assign the char 'c' to each element
  * Return: Pointer to the array, NULL if allocation fails
  *
  */
