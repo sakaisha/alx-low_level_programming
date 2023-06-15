@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * _atoi - Converts a string to an integer
- * @s: The string to be converted
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
  *
- * Return: The integer value converted from the string, or 0 if conversion fails
+ * Return: the int converted from the string
  */
 int _atoi(char *s)
 {
@@ -47,25 +47,25 @@ int _atoi(char *s)
 }
 
 /**
- * main - Entry point of the program
- * @argc: Number of command-line arguments
- * @argv: Array of command-line arguments
+ * main - multiplies two numbers
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: 0 (Success) if multiplication is successful, 1 (Error) otherwise
+ * Return: 0 (Success), 1 (Error)
  */
 int main(int argc, char *argv[])
 {
-	int result, num_1, num_2;
+	int result, num1, num2;
 
-	if (argc != 3)
+	if (argc < 3 || argc > 3)
 	{
-		printf("Error: Incorrect number of arguments\n");
+		printf("Error\n");
 		return (1);
 	}
 
-	num_1 = _atoi(argv[1]);
-	num_2 = _atoi(argv[2]);
-	result = num_1 * num_2;
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	result = num1 * num2;
 
 	printf("%d\n", result);
 
