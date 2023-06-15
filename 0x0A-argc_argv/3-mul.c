@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		printf("Error\n");
+		printf("Error: Incorrect number of arguments\n");
 		return (1);
 	}
 
