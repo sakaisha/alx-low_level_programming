@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * *string_nconcat - concatenates a specified number of bytes from one string to another
+ * *string_nconcat - concatenates a num of  bytes from one string to anoth
  * @s1: string to concatenate to
  * @s2: string to concatenate from
  * @n: number of bytes from str2 to concatenate to str1
