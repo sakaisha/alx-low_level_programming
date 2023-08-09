@@ -2,11 +2,11 @@
 #include "main.h"
 
 /**
- * main - Entry point of the program
- * @argc: Number of command-line arguments
- * @argv: Array of command-line arguments
+ * main - beginning point of the program
+ * @argc: Number of commandline arguments
+ * @argv: Array of commandline arguments
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 int main(int argc, char *argv[])
 {
