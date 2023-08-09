@@ -11,20 +11,17 @@
  */
 int is_all_digits(char *str)
 {
-  
-    	unsigned int index;
+	unsigned int index;
 
-    index = 0;
-    while (index < strlen(str))
-    {
-        if (!isdigit(str[index]))
-        {
-            return 0;
-        }
+	index = 0;
+	while (index < strlen(str)) /* Iterate through the string */
+	{
+		if (!isdigit(str[index])) /* Check if the character is a digit */
+			return (0);
 
-        index++;
-    }
-    return 1;
+		index++;
+	}
+	return (1);
 }
 
 /**
@@ -36,29 +33,28 @@ int is_all_digits(char *str)
  */
 int main(int argc, char *argv[])
 {
-    int index;
-    int str_to_int;
-    int total_sum = 0;
+	int index;
+	int str_to_int;
+	int total_sum = 0;
 
-    index = 1;
-    while (index < argc)
-    {
-        if (is_all_digits(argv[index]))
-        {
-            str_to_int = atoi(argv[index]); 
-            total_sum += str_to_int;
-        }
-        else
-        {
-            printf("Error\n");
-            return 1;
-        }
+	index = 1;
+	while (index < argc) /* Iterate through the argument array */
+	{
+		if (is_all_digits(argv[index]))
+		{
+			str_to_int = atoi(argv[index]); /* Convert string to integer using atoi */
+			total_sum += str_to_int;
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
 
-        index++;
-    }
+		index++;
+	}
 
-    printf("%d\n", total_sum);
+	printf("%d\n", total_sum); /* Print the total sum */
 
-    return 0;
+	return (0);
 }
-
