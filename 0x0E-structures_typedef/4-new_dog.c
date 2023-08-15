@@ -1,43 +1,41 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
 
 /**
- * new_dog - Creates a new dog structure
- * @name: Name of the new dog
- * @age: Age of the new dog
- * @owner: Owner of the new dog
- * Return: Pointer to the newly created dog structure, or NULL on failure
+ * new_dog - Creates a new dog.
+ * @name: Name of the dog.
+ * @age: Age of the dog.
+ * @owner: Owner of the dog.
+ *
+ * Return: Pointer to the new dog, or NULL if allocation fails.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-    if (name == NULL || owner == NULL)
-        return NULL;
+       	if (name == NULL || owner == NULL)
+	       	return (NULL);
+	
+	dog_t *new_dog = malloc(sizeof(dog_t));
+	if (new_dog == NULL)
+		return (NULL);
 
-    dog_t *new_dog = malloc(sizeof(dog_t));
-    if (new_dog == NULL)
-        return NULL;
+	char *name_copy = malloc(sizeof(char) * (strlen(name) + 1));
+	char *owner_copy = malloc(sizeof(char) * (strlen(owner) + 1));
+       
+	if (name_copy == NULL || owner_copy == NULL)
+	{
+		free(new_dog);
+		free(name_copy);
+		free(owner_copy);
+		return (NULL);
+	}
+	
+	strcpy(name_copy, name);
+	strcpy(owner_copy, owner);
 
-    int name_len = _strlen(name);
-    int owner_len = _strlen(owner);
+	new_dog->name = name_copy;
+	new_dog->age = age;
+	new_dog->owner = owner_copy;
 
-    new_dog->name = malloc(name_len + 1);
-    if (new_dog->name == NULL)
-    {
-        free(new_dog);
-        return NULL;
-    }
-
-    new_dog->owner = malloc(owner_len + 1);
-    if (new_dog->owner == NULL)
-    {
-        free(new_dog->name);
-        free(new_dog);
-        return NULL;
-    }
-
-    _strcpy(new_dog->name, name);
-    _strcpy(new_dog->owner, owner);
-    new_dog->age = age;
-
-    return new_dog;
+	return (new_dog);
 }
