@@ -3,24 +3,23 @@
 
 /**
  * sum_them_all - Calculates the sum of a variable number of integers.
- * @n: The number of integer arguments.
- * @...: The variable number of integer arguments.
+ * @n: The number of integers to sum up.
+ * @...: A variable number of integers to calculate the sum of.
  *
- * Return: The sum of the integers, or 0 if n is 0.
+ * Return: If n is 0, returns 0.
+ *         Otherwise, returns the sum of the given integers.
  */
 int sum_them_all(const unsigned int n, ...)
 {
-	if (n == 0)
-		return (0);
-	int sum = 0;
+	va_list args_list;
+	unsigned int i, sum = 0;
 
-	va_list args;
+	va_start(args_list, n);
 
-	va_start(args, n);
-	for (unsigned int i = 0; i < n; i++)
-	{
-		sum += va_arg(args, int);
-	}
-	va_end(args);
+	for (i = 0; i < n; i++)
+		sum += va_arg(args_list, int);
+
+	va_end(args_list);
+
 	return (sum);
 }
