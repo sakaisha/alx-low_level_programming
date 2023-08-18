@@ -7,7 +7,7 @@
  * @format: A format string containing the types of arguments to be printed.
  *          Supported types: 'c' (char), 'i' (int), 'f' (float), 's' (string)
  *          Any other character is ignored.
- *          The function stops processing arguments when the format string ends.
+ *          The function stops processing arguments when format string ends.
  */
 void print_all(const char * const format, ...)
 {
@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 					break;
 				default:
 					index++;
-					continue;  
+					continue;
 			}
 			separator = ", ";
 			index++;
