@@ -14,10 +14,10 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-       	va_list args_list;
+	va_list args_list;
 	char *str;
 	unsigned int index;
-	
+
 	va_start(args_list, n);
 
 	for (index = 0; index < n; index++)
