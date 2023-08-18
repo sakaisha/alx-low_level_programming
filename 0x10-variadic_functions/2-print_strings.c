@@ -18,14 +18,14 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *str;
 	unsigned int index;
 
-	va_start(strings, n);
+	va_start(args_list, n);
 
 	for (index = 0; index < n; index++)
 	{
-		str = va_arg(strings, char *);
+		str = va_arg(args_list, char *);
 
 		if (str == NULL)
-			printf("(nil)");
+			printf("(null)");
 		else
 			printf("%s", str);
 
@@ -35,5 +35,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	printf("\n");
 
-	va_end(strings);
+	va_end(args_list);
 }
