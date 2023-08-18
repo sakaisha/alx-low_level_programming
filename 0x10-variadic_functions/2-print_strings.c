@@ -14,6 +14,11 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
+	if (n == 0) {
+		printf("\n");
+		return;
+	}
+
 	va_list args_list;
 	char *str;
 	unsigned int index;
