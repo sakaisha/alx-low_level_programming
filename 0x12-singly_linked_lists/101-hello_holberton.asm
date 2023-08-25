@@ -6,8 +6,9 @@ section .text
     extern printf
 
 main:
-    sub rsp, 8               ; Align stack
-    mov rdi, format         ; Set format string
-    call printf             ; Call printf
-    add rsp, 8               ; Restore stack
-    ret
+    mov rdi, format
+    xor rax, rax
+    call printf
+    mov rax, 60         ; syscall: exit
+    xor rdi, rdi        ; status: 0
+    syscall
