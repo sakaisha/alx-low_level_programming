@@ -1,22 +1,22 @@
 #include "lists.h"
 
 /**
- * fetch_nodeint_at_index - Retrieves node at specified index within lin-lists
- * @head: The initial node of the linked list.
- * @index: The index of the desired node.
+ * fetch_nodeint_at_index - Retrieves the node at a given index in a linked list.
+ * @head: Initial node in the linked list.
+ * @index: Index of the desired node.
  *
  * Return: Pointer to the targeted node, or NULL if not found.
  */
 listint_t *fetch_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	unsigned int count = 0;
-	listint_t *current = head;
+	unsigned int i = 0;
+	listint_t *temp = head;
 
-	while (current && count < index)
+	while (temp && i < index)
 	{
-		current = current->next;
-		count++;
+		temp = temp->next;
+		i++;
 	}
 
-	return (current ? current : NULL);
+	return (temp ? temp : NULL);
 }
