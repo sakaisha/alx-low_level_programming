@@ -8,9 +8,11 @@
  * Return: 1 for success, -1 for failure.
  */
 int updateBit(unsigned long int *num, unsigned int position)
+{
 	if (position > 63)
 		return (-1);
 
 	*num = ((1UL << position) | *num);
 	return (1);
+
 }
