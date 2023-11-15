@@ -1,4 +1,4 @@
-#include "100-operations.h"
+#include "operations.h"
 
 /**
  * multi - Multiply two numbers

@@ -1,4 +1,4 @@
-#include "100-operations.h"
+#include "operations.h"
 
 /**
  * modif - Computes the modulo of two numbers.
