@@ -1,5 +1,5 @@
-#ifndef OPERATIONS_H
-#define OPERATIONS_H
+#ifndef 100-OPERATIONS_H
+#define 100-OPERATIONS_H
 
 #include <stdio.h>
 
