@@ -6,13 +6,14 @@
  *
  * Return: coded number.
  */
+
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	unsigned long int hash;  // Initialize hash value
+	unsigned long int hash;
 	int c;
 
-	hash = 5381;  // Magic number for hash initialization
-	while ((c = *str++))  // Loop through each character
+	hash = 5381;
+	while ((c = *str++))
 	{
 		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
 	}
