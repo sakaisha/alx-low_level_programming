@@ -88,4 +88,20 @@ void shash_table_delete(shash_table_t *ht);
 void insert_list(shash_table_t *ht, shash_node_t *node, unsigned long int idx);
 void insert_dlist(shash_table_t *ht, shash_node_t *node);
 
+typedef struct shash_table_s
+{
+	     unsigned long int size;
+	          shash_node_t **array;
+		       shash_node_t *shead;
+		            shash_node_t *stail;
+} shash_table_t;
+shash_table_t *shash_table_create(unsigned long int size);
+int shash_table_set(shash_table_t *ht, const char *key, const char *value);
+char *shash_table_get(const shash_table_t *ht, const char *key);
+void shash_table_print(const shash_table_t *ht);
+void shash_table_print_rev(const shash_table_t *ht);
+void shash_table_delete(shash_table_t *ht);
+shash_node_t *add_node_of_sortedList(shash_table_t *table, shash_node_t *last_node, shash_node_t *node);
+void add_to_sorted_list(shash_table_t *table, const char *key, shash_node_t *new_item);
+shash_node_t *create_node(const char *key, const char *value);
 #endif
